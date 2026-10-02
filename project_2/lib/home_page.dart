@@ -22,7 +22,41 @@ class Homepage extends StatelessWidget {
             UserAccountsDrawerHeader(
               accountName: Text("Arif"),
               accountEmail: Text("moarif22@gmail.com"),
-            )
+            ),
+
+            ListTile(
+              title: Text("Homepage"),
+              onTap: (){},
+              leading: Icon(Icons.home),
+              hoverColor: Colors.lime,
+            ),
+
+            Divider(), 
+
+            ListTile(
+              title: Text("Settings"),
+              onTap: (){},
+              leading: Icon(Icons.settings),
+              hoverColor: Colors.lime,
+            ),
+
+
+            Divider(),
+
+            Spacer(), 
+
+            ListTile(
+              leading: Icon(Icons.person),
+              trailing: IconButton(
+                onPressed: (){}, 
+                icon: Icon(Icons.logout),
+              ),
+              title: InkWell(
+                child: Text("Profile"), 
+                onTap: (){},
+                hoverColor: Colors.lime,
+              ),
+            ),
           ],
         ),   
       ),
