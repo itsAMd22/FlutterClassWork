@@ -61,6 +61,8 @@ class Homepage extends StatelessWidget {
         ),   
       ),
       // endDrawer: Drawer(),
+      
+      
       body: Center(
         child: Text(
           "Welcome to homepage!",
@@ -70,6 +72,14 @@ class Homepage extends StatelessWidget {
             color: Color.fromARGB(255, 1, 0, 18),
           ),
         ),
+      ),
+      
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){},
+        backgroundColor: const Color.fromARGB(255, 225, 87, 23),
+        foregroundColor: Colors.white,
+        tooltip: "Add",
+        child: Icon(Icons.add),
       ),
     );
   }
