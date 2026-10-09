@@ -83,8 +83,28 @@ class Homepage extends StatelessWidget {
             ),
             child: Text("Blue")
           ),
-          ElevatedButton(onPressed: (){}, child: Text("Pink")),
-          OutlinedButton(onPressed: (){}, child: Text("Black")),
+          ElevatedButton(
+            onPressed: (){},  
+            style: TextButton.styleFrom(
+              side: BorderSide(),
+              backgroundColor: const Color.fromARGB(255, 220, 206, 7),
+              foregroundColor: const Color.fromARGB(255, 0, 0, 0),
+              shadowColor: Colors.black,
+              elevation: 10,
+            ),
+            child: Text("Pink")
+          ),
+          OutlinedButton(
+            onPressed: (){},  
+            style: TextButton.styleFrom(
+              side: BorderSide(),
+              backgroundColor: const Color.fromARGB(255, 8, 239, 69),
+              foregroundColor: Colors.black,
+              shadowColor: Colors.yellow,
+              elevation: 10,
+            ), 
+            child: Text("Black")
+          ),
         ],
       ),
       
