@@ -17,7 +17,7 @@ class Homepage extends StatelessWidget {
         ],
       ),
       drawer: Drawer(
-        child: Column(
+        child: ListView(
           children: [
             UserAccountsDrawerHeader(
               accountName: Text("Arif"),
@@ -62,18 +62,6 @@ class Homepage extends StatelessWidget {
       ),
       // endDrawer: Drawer(),
       
-      
-      body: Center(
-        child: Text(
-          "Welcome to homepage!",
-          style: TextStyle(
-            fontSize: 22,
-            fontWeight: FontWeight.bold,
-            color: Color.fromARGB(255, 1, 0, 18),
-          ),
-        ),
-      ),
-      
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
         backgroundColor: const Color.fromARGB(255, 225, 87, 23),
@@ -81,6 +69,25 @@ class Homepage extends StatelessWidget {
         tooltip: "Add",
         child: Icon(Icons.add),
       ),
+      
+      body: Row(
+        children: [
+          TextButton(
+            onPressed: (){}, 
+            style: TextButton.styleFrom(
+              side: BorderSide(),
+              backgroundColor: const Color.fromARGB(255, 178, 208, 234),
+              foregroundColor: Colors.black,
+              shadowColor: Colors.black,
+              elevation: 10,
+            ),
+            child: Text("Blue")
+          ),
+          ElevatedButton(onPressed: (){}, child: Text("Pink")),
+          OutlinedButton(onPressed: (){}, child: Text("Black")),
+        ],
+      ),
+      
     );
   }
 }
