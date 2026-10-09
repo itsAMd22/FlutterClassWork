@@ -72,38 +72,51 @@ class Homepage extends StatelessWidget {
       
       body: Row(
         children: [
-          TextButton(
-            onPressed: (){}, 
-            style: TextButton.styleFrom(
-              side: BorderSide(),
-              backgroundColor: const Color.fromARGB(255, 178, 208, 234),
-              foregroundColor: Colors.black,
-              shadowColor: Colors.black,
-              elevation: 10,
+          
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: TextButton(
+              onPressed: (){}, 
+              style: TextButton.styleFrom(
+                side: BorderSide(),
+                backgroundColor: const Color.fromARGB(255, 178, 208, 234),
+                foregroundColor: Colors.black,
+                shadowColor: Colors.black,
+                elevation: 10,
+              ),
+              child: Text("Blue")
             ),
-            child: Text("Blue")
           ),
-          ElevatedButton(
-            onPressed: (){},  
-            style: TextButton.styleFrom(
-              side: BorderSide(),
-              backgroundColor: const Color.fromARGB(255, 220, 206, 7),
-              foregroundColor: const Color.fromARGB(255, 0, 0, 0),
-              shadowColor: Colors.black,
-              elevation: 10,
+          
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 10, 10, 10),
+            child: ElevatedButton(
+              onPressed: (){},  
+              style: TextButton.styleFrom(
+                side: BorderSide(),
+                backgroundColor: const Color.fromARGB(255, 220, 206, 7),
+                foregroundColor: const Color.fromARGB(255, 0, 0, 0),
+                shadowColor: Colors.black,
+                elevation: 10,
+              ),
+              child: Text("Pink")
             ),
-            child: Text("Pink")
           ),
-          OutlinedButton(
-            onPressed: (){},  
-            style: TextButton.styleFrom(
-              side: BorderSide(),
-              backgroundColor: const Color.fromARGB(255, 8, 239, 69),
-              foregroundColor: Colors.black,
-              shadowColor: Colors.yellow,
-              elevation: 10,
-            ), 
-            child: Text("Black")
+          
+          
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 10, 10, 10),
+            child: OutlinedButton(
+              onPressed: (){},  
+              style: TextButton.styleFrom(
+                side: BorderSide(),
+                backgroundColor: const Color.fromARGB(255, 8, 239, 69),
+                foregroundColor: Colors.black,
+                shadowColor: Colors.yellow,
+                elevation: 10,
+              ), 
+              child: Text("Black")
+            ),
           ),
         ],
       ),
