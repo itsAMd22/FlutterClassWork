@@ -23,8 +23,8 @@ class ToDoTile extends StatelessWidget{
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     final tileColor = isDark
-        ? const Color.fromARGB(255, 255, 235, 58) // your current yellow (dark mode)
-        : const Color(0xFFFFF3C4);   
+        ? const Color.fromARGB(255, 255, 235, 58) 
+        : const Color.fromARGB(255, 223, 191, 62);   
         
     return Padding(
       padding: const EdgeInsets.only(left: 25, right: 25, top: 25),

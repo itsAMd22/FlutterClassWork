@@ -25,7 +25,6 @@ class DialogBox extends StatelessWidget{
             TextField(
               controller: controller,
               decoration: InputDecoration(
-                
                 border: OutlineInputBorder(),
                 hintText: "Add a new task",
               ),
@@ -45,7 +44,6 @@ class DialogBox extends StatelessWidget{
                 MyButton(text: "Cancel", onPressed: onCancel),
               ],
             ),
-            
           ],
         ),
       ),

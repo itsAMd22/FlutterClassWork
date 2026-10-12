@@ -10,7 +10,7 @@ void main() async {
   // Required when executing async calls before runApp()
   WidgetsFlutterBinding.ensureInitialized();
   
-  //init the hive
+  //initiate the hive
   await Hive.initFlutter();
 
   // open box
@@ -27,15 +27,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  // dark and light theme
-  // ThemeMode _themeMode = ThemeMode.light;
-
-  // void _toggleTheme(bool isDark) {
-  //   setState(() {
-  //     _themeMode = isDark ? ThemeMode.dark : ThemeMode.light;
-  //   });
-  // }
-
+  
   // dark, light and system theme(by default)
   final _box = Hive.box('mybox');
 

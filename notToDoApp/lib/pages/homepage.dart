@@ -53,14 +53,6 @@ class _HomePageState extends State<HomePage> {
     db.updateDataBase();
   }
 
-  // Complete Delete Function
-  void deleteTask(int index) {
-    setState(() {
-      db.toDoList.removeAt(index);
-    });
-    db.updateDataBase();
-  }
-
   // Open task creation dialog
   void createNewTask() {
     showDialog(
@@ -73,6 +65,14 @@ class _HomePageState extends State<HomePage> {
         );
       },
     );
+  }
+  
+  // Complete Delete Function
+  void deleteTask(int index) {
+    setState(() {
+      db.toDoList.removeAt(index);
+    });
+    db.updateDataBase();
   }
 
   @override
@@ -105,7 +105,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: const Color.fromARGB(255, 198, 173, 83),
         child: ListView(
           children: [
-            // 1
+            // 1-> user info
             UserAccountsDrawerHeader(
               decoration: const BoxDecoration(
                 color: Color.fromARGB(255, 74, 73, 66),
@@ -128,7 +128,7 @@ class _HomePageState extends State<HomePage> {
               accountEmail: const Text("mo.arif.2205@gmail.com\nCSE 64B"),
             ),
             
-            // 2
+            // 2->profile page
             ListTile(
               leading: const Icon(Icons.person, color: Colors.black,),
               title: const Text('Profile', style: TextStyle(color: Colors.black),),
@@ -139,7 +139,7 @@ class _HomePageState extends State<HomePage> {
             ),
             const Divider(),
 
-            // 3
+            // 3->settings page
             ListTile(
               leading: const Icon(Icons.settings, color: Colors.black,),
               title: const Text('Settings', style: TextStyle(color: Colors.black),),
@@ -154,6 +154,7 @@ class _HomePageState extends State<HomePage> {
       
       //body - list of tasks
       body: ListView.builder(
+        scrollDirection: Axis.vertical,
         itemCount: db.toDoList.length,
         itemBuilder: (context, index) {
           return ToDoTile(

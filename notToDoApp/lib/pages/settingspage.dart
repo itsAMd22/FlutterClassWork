@@ -56,9 +56,12 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // appbar
       appBar: AppBar(
         title: const Text('Settings'),
       ),
+
+      // body
       body: ListView(
         children: [
           // 1. Appearance Section
@@ -100,6 +103,7 @@ class _SettingsPageState extends State<SettingsPage> {
               ),
             ),
           ),
+          
           SwitchListTile(
             secondary: const Icon(Icons.notifications_active),
             title: const Text('Push Notifications'),
@@ -111,6 +115,7 @@ class _SettingsPageState extends State<SettingsPage> {
               });
             },
           ),
+
           SwitchListTile(
             secondary: const Icon(Icons.email),
             title: const Text('Email Updates'),
@@ -136,6 +141,7 @@ class _SettingsPageState extends State<SettingsPage> {
               ),
             ),
           ),
+          
           ListTile(
             leading: const Icon(Icons.lock),
             title: const Text('Privacy & Security'),
@@ -144,6 +150,7 @@ class _SettingsPageState extends State<SettingsPage> {
               // Action for privacy settings page
             },
           ),
+          
           ListTile(
             leading: const Icon(Icons.logout, color: Colors.red),
             title: const Text(
