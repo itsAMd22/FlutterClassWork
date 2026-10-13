@@ -9,8 +9,10 @@ class IntroPage extends StatelessWidget{
       backgroundColor: isDark ?Colors.grey.shade800 :  Colors.grey.shade200,
       body: Center(
         child: Column(
+          // mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
+            const SizedBox(height: 50),
             // logo
             Icon(
               Icons.today_outlined,
@@ -23,8 +25,9 @@ class IntroPage extends StatelessWidget{
             Text(
               "notToDoApp",
               style: TextStyle(
+                color: isDark ?Colors.grey.shade400 :  Colors.grey.shade700,
                 fontWeight: FontWeight.bold,
-                fontSize: 20,
+                fontSize: 30,
               ),
             ),
 
@@ -37,11 +40,14 @@ class IntroPage extends StatelessWidget{
                 // fontStyle: ,
                 letterSpacing: 5,
                 color: isDark ?Colors.grey.shade400 :  Colors.grey.shade700, 
+                fontSize: 20,
+                fontStyle: FontStyle.italic,
               ),
             ),
 
+            Spacer(),
             IntroButton(
-              onTap: () => {Navigator.pushNamed(context, '/homepage')}, 
+              onTap: () => {Navigator.pushNamed(context, '/loginpage')}, 
               child: Icon(Icons.arrow_forward_ios_sharp),
             ),
           ],

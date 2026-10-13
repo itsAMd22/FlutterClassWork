@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:not_to_do_app/pages/homepage.dart';
 import 'package:not_to_do_app/pages/intropage.dart';
+import 'package:not_to_do_app/pages/loginpage.dart';
 import 'package:not_to_do_app/pages/notificationscreen.dart';
 import 'package:not_to_do_app/pages/profilepage.dart';
 import 'package:not_to_do_app/pages/settingspage.dart';
@@ -56,6 +57,7 @@ class _MyAppState extends State<MyApp> {
       home: IntroPage(),
       routes: {
         '/intropage': (context) => const IntroPage(),
+        '/loginpage': (context) => const LoginPage(),
         '/homepage': (context) => const HomePage(),
         '/notifications': (context) => const NotificationScreen(),
         '/profile': (context) => const ProfilePage(),

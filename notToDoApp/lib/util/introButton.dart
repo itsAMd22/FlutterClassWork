@@ -5,7 +5,11 @@ class IntroButton extends StatelessWidget{
   final void Function()? onTap;
   final Widget? child;
 
-  const IntroButton({super.key, required this.onTap, required this.child});
+  const IntroButton({
+    super.key, 
+    required this.onTap, 
+    required this.child
+  });
 
 
   Widget build(BuildContext context){
