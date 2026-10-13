@@ -41,7 +41,7 @@ class _SettingsPageState extends State<SettingsPage> {
                 Navigator.pop(context); // Close dialog
                 Navigator.pushNamedAndRemoveUntil(
                   context,
-                  '/homepage',
+                  '/intropage',
                   (route) => false,
                 ); // Clear navigation stack and return to root
               },
