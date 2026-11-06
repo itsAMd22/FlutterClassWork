@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:project_4/ConverterPage.dart';
-import 'package:project_4/ListViewPage.dart';
+import 'hompage.dart';
+import 'loginpage.dart';
+import 'registrationpage.dart';
 
 void main(){
   runApp(const MyApp());
 }
 
-
-class MyApp extends StatefulWidget {
-  const new({super.key});
+class MyApp extends StatelessWidget{
+  const MyApp({super.key});
 
   @override
-  State<MyApp> createState() => _CoverterPage();
-}
-
-class _CoverterPage extends State<MyApp> {
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ListViewPage(),
+      initialRoute: '/',
+      routes:{
+        '/': (context) => const LoginPage(),
+        '/register': (context) => const RegisterPage(),
+        '/home': (context) => const HomePage(),
+      },
     );
   }
 }
